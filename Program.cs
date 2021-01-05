@@ -56,14 +56,12 @@ namespace RandomGenVisualizer
 
                 //These two if statements print out a line of colored ')' characters
                 //The number of ')' printed is equal to currentNumber
-                //If currentNumber is positive, prints green
-                //If currentNumber is negative, prints red
 
                 if (currentNumber > 0) //Positive, Green
                 {
                     Console.ForegroundColor = ConsoleColor.Green;
                     Console.Write(currentNumber);
-                    for (int length = 1; length <= currentNumber; length++)
+                    for (int i = 1; i <= currentNumber; i++)
                     {
                         Console.Write(")");
                     }
@@ -73,7 +71,7 @@ namespace RandomGenVisualizer
                 {
                     Console.ForegroundColor = ConsoleColor.Red;
                     Console.Write(currentNumber);
-                    for (int length = 1; length <= currentNumber * -1; length++)
+                    for (int i = 1; i <= currentNumber * -1; i++)
                     {
                         Console.Write(")");
                     }
