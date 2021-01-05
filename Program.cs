@@ -19,11 +19,6 @@ namespace RandomGenVisualizer
             while(true) //Loop time
             {
 
-                //These two if statements print out a line of colored ')' characters
-                //The number of ')' printed is equal to currentNumber
-                //If currentNumber is positive, prints green
-                //If currentNumber is negative, prints red
-
                 printCurrentNumberVisualization();
                 currentNumber += random.Next(randomMin,randomMax);//Lowers or raises currentNumber by custom random number in range
                 Thread.Sleep(sleepTime);//Customizable delay
@@ -58,6 +53,11 @@ namespace RandomGenVisualizer
 
             void printCurrentNumberVisualization() 
             {
+
+                //These two if statements print out a line of colored ')' characters
+                //The number of ')' printed is equal to currentNumber
+                //If currentNumber is positive, prints green
+                //If currentNumber is negative, prints red
 
                 if (currentNumber > 0) //Positive, Green
                 {
