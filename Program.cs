@@ -16,12 +16,13 @@ namespace RandomGenVisualizer
             int sleepTime = 1;
             askUserForGenerationSettings();
 
-            while(true) //Loop time
+            while(true)
             {
 
                 printCurrentNumberVisualization();
-                currentNumber += random.Next(randomMin,randomMax);//Lowers or raises currentNumber by custom random number in range
-                Thread.Sleep(sleepTime);//Customizable delay
+                randomlyAdjustCurrentNumber();
+                Delay();
+                
             }
 
             void askUserForGenerationSettings()
@@ -79,6 +80,10 @@ namespace RandomGenVisualizer
                 Console.WriteLine();
             }
 
-        }
+            void randomlyAdjustCurrentNumber() { currentNumber += random.Next(randomMin, randomMax); }
+
+            void Delay() { Thread.Sleep(sleepTime); }
+
+            }
     }
 }
